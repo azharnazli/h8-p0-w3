@@ -11,6 +11,8 @@ function dataHandling2(inp) {
   input.splice(4, 1, "Pria", "SMA Internasional Metro");
   var bulan = input[3].split("/");
   var newBulan = input[3].split("/");
+  var newDate = input[3].split("/")
+  var limitchar = input[1].slice(0, 14)
   switch (bulan[1]) {
     case "01":
       bulan[1] = "Januari";
@@ -49,8 +51,15 @@ function dataHandling2(inp) {
       bulan[1] = "Desember";
       break;
   }
+  console.log(input)
   console.log(bulan[1]);
+  newBulan.sort(function (a, b) {
+    return b - a
+  })
   console.log(newBulan);
+  var newDate = input[3].split("/")
+  console.log(newDate.join("-"))
+  console.log(limitchar)
 }
 
 dataHandling2(input);
