@@ -9,13 +9,12 @@ function groupAnimals(animals) {
         } else if (result[idx][0][0] === animals[i][0]) {
             result[idx].push(animals[i])
         } else {
-            result.push([animals[i]])
             idx++
+            result.push([animals[i]])
         }
     }
     return result
 }
-
 
 
 
